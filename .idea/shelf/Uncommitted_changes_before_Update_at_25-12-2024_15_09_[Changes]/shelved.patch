@@ -1,0 +1,226 @@
+Index: README.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/README.md b/README.md
+new file mode 100644
+--- /dev/null	(date 1735135735908)
++++ b/README.md	(date 1735135735908)
+@@ -0,0 +1,118 @@
++# Energy Load Forecasting with Machine Learning
++
++## Project Description
++This project addresses a critical challenge in the energy sector: accurately predicting electricity consumption. By leveraging advanced machine learning techniques, the system forecasts energy loads with high precision, supporting grid management, renewable energy integration, and energy waste reduction.
++
++### Key Features:
++- Integration of weather data (via OpenWeather API) and time-based features.
++- Implementation of multiple machine learning models: Linear Regression, ARIMA, LSTM, and XGBoost.
++- Comprehensive model evaluation using metrics such as MAE, RMSE, and MAPE.
++- Deployment as a Streamlit web application for real-time energy load predictions.
++
++---
++
++## Table of Contents
++- [Installation](#installation)
++- [Features](#features)
++- [Technologies Used](#technologies-used)
++- [How It Works](#how-it-works)
++- [Results](#results)
++- [Future Work](#future-work)
++- [Contributing](#contributing)
++- [License](#license)
++
++---
++
++## Installation
++1. Clone the repository:
++   ```bash
++   git clone https://github.com/your-username/energy-forecasting.git
++   cd energy-forecasting
++   ```
++2. Create and activate a virtual environment:
++   ```bash
++   python -m venv env
++   source env/bin/activate  # On Windows: `env\Scripts\activate`
++   ```
++3. Install the required dependencies:
++   ```bash
++   pip install -r requirements.txt
++   ```
++4. Obtain an API key from OpenWeather and add it to the `.env` file:
++   ```env
++   OPENWEATHER_API_KEY=your_api_key
++   ```
++5. Run the Streamlit app:
++   ```bash
++   streamlit run app.py
++   ```
++
++---
++
++## Features
++- **Data Collection:**
++  - Historical energy consumption data.
++  - Weather data using OpenWeather API.
++  - Time-based features such as hour, day, month, and holidays.
++
++- **Data Preprocessing:**
++  - Handling missing values.
++  - Feature engineering (temporal and weather-related).
++  - Normalization and scaling.
++
++- **Machine Learning Models:**
++  - Linear Regression: Baseline model.
++  - ARIMA: Traditional time-series model.
++  - LSTM Neural Network: For complex pattern recognition.
++  - XGBoost: Gradient boosting for structured data.
++
++- **Evaluation Metrics:**
++  - Mean Absolute Error (MAE).
++  - Root Mean Squared Error (RMSE).
++  - Mean Absolute Percentage Error (MAPE).
++
++- **Deployment:**
++  - Real-time predictions using Streamlit.
++  - User-friendly interface for parameter input.
++
++---
++
++## Technologies Used
++- **Programming Languages:** Python
++- **Libraries:** TensorFlow, Scikit-learn, Pandas, NumPy, XGBoost, Streamlit
++- **API:** OpenWeather API
++
++---
++
++## How It Works
++1. **Data Collection:** Historical data is combined with weather and time-based features.
++2. **Preprocessing:** Data is cleaned, normalized, and engineered for optimal input.
++3. **Model Training:** Models are trained and evaluated on key metrics.
++4. **Deployment:** The best-performing model (XGBoost) is integrated into a Streamlit app for real-time predictions.
++
++---
++
++## Results
++- **Best Model:** XGBoost
++  - MAE: 213.79
++  - RMSE: 332.89
++
++The project demonstrates significant improvements in forecasting accuracy, aiding better grid management and renewable energy integration.
++
++---
++
++## Future Work
++- Extend the system to support multiple regions.
++- Explore advanced architectures like Transformers.
++- Integrate with IoT-based smart grids.
++- Add real-time continuous learning capabilities.
++
++---
++
++## Contributing
++Contributions are welcome! Please fork the repository and submit a pull request.
++
++---
++
++## License
++This project is licensed under the MIT License. See the LICENSE file for details.
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"79de8d3e-d0c7-4f4c-b3be-1b70e9be41f8\" name=\"Changes\" comment=\"AI based load forecasting\">\r\n      <change afterPath=\"$PROJECT_DIR$/best_energy_load_model.pkl\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/german_energy_data.csv\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/scaler.pkl\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/synthetic_energy_data.csv\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Python Script\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\"><![CDATA[{\r\n  \"lastFilter\": {\r\n    \"state\": \"OPEN\",\r\n    \"assignee\": \"Saske77\"\r\n  }\r\n}]]></component>\r\n  <component name=\"GithubPullRequestsUISettings\"><![CDATA[{\r\n  \"selectedUrlAndAccountId\": {\r\n    \"url\": \"https://github.com/Saske77/AI-based-Load-Forecasting\",\r\n    \"accountId\": \"8ecfafbe-65b3-4dea-a38d-024647358a35\"\r\n  }\r\n}]]></component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 3\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2qUAA9KUw5chzNV1zxWSGeK4wiQ\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Python.Data Collection and Preprocessing Module.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.Machine Learning Models for Energy Load Forecasting.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.Synthetic Energy Consumption Data Generator.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.alles.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.main.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.model_development.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.streamlit_app.executor&quot;: &quot;Run&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;master&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RunManager\" selected=\"Python.main\">\r\n    <configuration name=\"alles\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"AIbased energy forecasting\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/alles.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"main\" type=\"PythonConfigurationType\" factoryName=\"Python\" nameIsGenerated=\"true\">\r\n      <module name=\"AIbased energy forecasting\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/main.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Python.alles\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PY-242.23726.102\" />\r\n        <option value=\"bundled-python-sdk-5e1850174b45-399fe30bd8c1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.23726.102\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"79de8d3e-d0c7-4f4c-b3be-1b70e9be41f8\" name=\"Changes\" comment=\"\" />\r\n      <created>1734706633724</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1734706633724</updated>\r\n      <workItem from=\"1734706635101\" duration=\"4650000\" />\r\n      <workItem from=\"1734795800432\" duration=\"15311000\" />\r\n      <workItem from=\"1735132535142\" duration=\"847000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"AI based load forecasting\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1734972249497</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1734972249497</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"AI based load forecasting\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"AI based load forecasting\" />\r\n  </component>\r\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\r\n    <SUITE FILE_PATH=\"coverage/AIbased_energy_forecasting$Synthetic_Energy_Consumption_Data_Generator.coverage\" NAME=\"Synthetic Energy Consumption Data Generator Coverage Results\" MODIFIED=\"1734710105849\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$\" />\r\n    <SUITE FILE_PATH=\"coverage/AIbased_energy_forecasting$Data_Collection_and_Preprocessing_Module.coverage\" NAME=\"Data Collection and Preprocessing Module Coverage Results\" MODIFIED=\"1734796176723\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$\" />\r\n    <SUITE FILE_PATH=\"coverage/AIbased_energy_forecasting$alles.coverage\" NAME=\"alles Coverage Results\" MODIFIED=\"1734880502417\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$\" />\r\n    <SUITE FILE_PATH=\"coverage/AIbased_energy_forecasting$model_development.coverage\" NAME=\"model_development Coverage Results\" MODIFIED=\"1734883428454\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$\" />\r\n    <SUITE FILE_PATH=\"coverage/AIbased_energy_forecasting$streamlit_app.coverage\" NAME=\"streamlit_app Coverage Results\" MODIFIED=\"1734800472463\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$\" />\r\n    <SUITE FILE_PATH=\"coverage/AIbased_energy_forecasting$Machine_Learning_Models_for_Energy_Load_Forecasting.coverage\" NAME=\"Machine Learning Models for Energy Load Forecasting Coverage Results\" MODIFIED=\"1734796385210\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$\" />\r\n    <SUITE FILE_PATH=\"coverage/AIbased_energy_forecasting$main.coverage\" NAME=\"main Coverage Results\" MODIFIED=\"1734886845783\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 7599601a1cb270fbe4357d71cd659efb407d516e)
++++ b/.idea/workspace.xml	(date 1735135735964)
+@@ -5,10 +5,7 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="79de8d3e-d0c7-4f4c-b3be-1b70e9be41f8" name="Changes" comment="AI based load forecasting">
+-      <change afterPath="$PROJECT_DIR$/best_energy_load_model.pkl" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/german_energy_data.csv" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/scaler.pkl" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/synthetic_energy_data.csv" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -24,20 +21,21 @@
+     </option>
+   </component>
+   <component name="Git.Settings">
++    <option name="PUSH_AUTO_UPDATE" value="true" />
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+-  "lastFilter": {
+-    "state": "OPEN",
+-    "assignee": "Saske77"
++  <component name="GitHubPullRequestSearchHistory">{
++  &quot;lastFilter&quot;: {
++    &quot;state&quot;: &quot;OPEN&quot;,
++    &quot;assignee&quot;: &quot;Saske77&quot;
+   }
+-}]]></component>
+-  <component name="GithubPullRequestsUISettings"><![CDATA[{
+-  "selectedUrlAndAccountId": {
+-    "url": "https://github.com/Saske77/AI-based-Load-Forecasting",
+-    "accountId": "8ecfafbe-65b3-4dea-a38d-024647358a35"
++}</component>
++  <component name="GithubPullRequestsUISettings">{
++  &quot;selectedUrlAndAccountId&quot;: {
++    &quot;url&quot;: &quot;https://github.com/Saske77/AI-based-Load-Forecasting&quot;,
++    &quot;accountId&quot;: &quot;8ecfafbe-65b3-4dea-a38d-024647358a35&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="ProjectColorInfo">{
+   &quot;associatedIndex&quot;: 3
+ }</component>
+@@ -49,25 +47,25 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;Python.Data Collection and Preprocessing Module.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.Machine Learning Models for Energy Load Forecasting.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.Synthetic Energy Consumption Data Generator.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.alles.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.model_development.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.streamlit_app.executor&quot;: &quot;Run&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "Python.Data Collection and Preprocessing Module.executor": "Run",
++    "Python.Machine Learning Models for Energy Load Forecasting.executor": "Run",
++    "Python.Synthetic Energy Consumption Data Generator.executor": "Run",
++    "Python.alles.executor": "Run",
++    "Python.main.executor": "Run",
++    "Python.model_development.executor": "Run",
++    "Python.streamlit_app.executor": "Run",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "git-widget-placeholder": "main",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
++    "vue.rearranger.settings.migration": "true"
+   }
+-}</component>
++}]]></component>
+   <component name="RunManager" selected="Python.main">
+     <configuration name="alles" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+       <module name="AIbased energy forecasting" />
